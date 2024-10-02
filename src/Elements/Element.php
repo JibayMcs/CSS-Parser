@@ -139,6 +139,17 @@ class Element extends Serializer
                     continue;
                 }
             }
+            // Vérifier si la ligne commence par '@apply'
+            if (strpos($line, '@apply') === 0) {
+                // Extraire les classes appliquées
+                $classes = trim(substr($line, strlen('@apply')));
+                $declarations[] = [
+                    'property' => '@apply',
+                    'value' => $classes,
+                ];
+                continue;
+            }
+            // Traiter les déclarations de propriétés classiques
             $parts = explode(':', $line, 2);
             if (count($parts) == 2) {
                 $property = trim($parts[0]);

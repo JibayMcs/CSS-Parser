@@ -1,0 +1,23 @@
+{
+    "name": "jibaymcs/css-parser",
+    "description": "A CSS To JSON/Array/CSS Parser mainly used for Stylament a theme builder for FilamentPHP",
+    "version": "1.0.0",
+    "type": "library",
+    "php": "^8.2",
+    "autoload": {
+        "psr-4": {
+            "Jibaymcs\\CssParser\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JibayMcs",
+            "email": "jb@ss2i-digital.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "ext-json": "*",
+      "ext-ctype": "*"
+    }
+}
